@@ -1,0 +1,8 @@
+body {
+    background-color: rgb(44, 58, 44);
+}
+
+#weatherForm {
+    text-align: center;
+    margin-top: 10%;
+}
