@@ -3,7 +3,7 @@ async function handleSubmit() {
 
     const options = {method: 'GET', headers: {accept: 'application/json'}};
     const apikey = "xe1PzPfcxA7bVAAxIFtpL528GwErS5wv&q";
-    const url = "http://dataservice.accuweather.com";
+    const url = "https://dataservice.accuweather.com";
 
     const loc_id = await fetch(`${url}/locations/v1/postalcodes/search?apikey=${apikey}=${zipcode}`, options)
         .then(rawZipcode => rawZipcode.json())
