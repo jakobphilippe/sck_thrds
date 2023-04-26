@@ -37,6 +37,11 @@ async function handleSubmit() {
         msg = "If you live in a shitty Fenway brownstone you're fucked. Otherwise blast that AC and stay inside"
     }
     console.log(msg);
-    var msgElem = document.getElementById("msg");
+    const msgElem = document.getElementById("msg");
+    const tempElem = document.getElementById("temp");
+
     msgElem.innerHTML = msg;
+    tempElem.innerHTML = `Tomorrows high at at ${zipcode} will be `+ tomorrowHigh + "&deg;F";
+    const emojiElem = document.getElementById("emoji");
+    emojiElem.style.display = "inherit"
 }

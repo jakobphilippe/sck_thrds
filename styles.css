@@ -8,8 +8,12 @@ body {
     margin-top: 10%;
 }
 
-#msg {
+.center {
     text-align: center;
     margin-top: 3%;
     color: cadetblue;
+}
+
+#emoji {
+    font-size: 20em;
 }
