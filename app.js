@@ -3,7 +3,7 @@ async function handleSubmit() {
 
     const options = {method: 'GET', headers: {accept: 'application/json'}};
 
-    const loc_id = await fetch(`http://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=xe1PzPfcxA7bVAAxIFtpL528GwErS5wv&q=${zipcode}`, options)
+    const loc_id = await fetch(`https://dataservice.accuweather.com/locations/v1/postalcodes/search?apikey=xe1PzPfcxA7bVAAxIFtpL528GwErS5wv&q=${zipcode}`, options)
         .then(response => response.json())
         .then(response => {
             console.log(response)
@@ -11,7 +11,7 @@ async function handleSubmit() {
         })
         .catch(err => console.error(err));
 
-    const weather_data = await fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${loc_id}?apikey=xe1PzPfcxA7bVAAxIFtpL528GwErS5wv`, options)
+    const weather_data = await fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${loc_id}?apikey=xe1PzPfcxA7bVAAxIFtpL528GwErS5wv`, options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
